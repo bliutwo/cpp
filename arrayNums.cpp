@@ -18,8 +18,10 @@ int main() {
     printArray(tracker, n);
     for (int i = 0; i < n; i++) {
         if (arr[i] == '.') continue;
-        cout << arr[i] - '1' << endl;
-        tracker[arr[i] - '1']++;
+        int index = arr[i] - '1';
+        cout << index << endl;
+        tracker[index]++;
     }
     printArray(tracker, n);
+    cout << multiplyAllValuesOfArray(tracker, n) << endl;
 }
