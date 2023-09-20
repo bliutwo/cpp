@@ -2,6 +2,10 @@
 using namespace std;
 
 template <class T> void printVector(vector<T>& v) {
+    if (v.empty()) {
+        cout << "{ }\n";
+        return;
+    }
     cout << "{ ";
     for (size_t i = 0; i < v.size() - 1; i++) {
         cout << v[i] << ", ";

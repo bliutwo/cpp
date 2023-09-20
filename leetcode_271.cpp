@@ -5,7 +5,17 @@ using namespace std;
 
 class Codec {
 private:
-    string separator = "asdfghjkl";
+    char separator = "π";
+    vector<string> split_string(string input, char delimiter) {
+        stringstream ss(s);
+        string buffer;
+        vector<string> stringList;
+        while(getline(ss, buffer, '_')) {
+            stringList.push_back(buffer);
+        }
+        return stringList;
+    }
+
 public:
 
     // Encodes a list of strings to a single string.
@@ -21,9 +31,7 @@ public:
 
     // Decodes a single string to a list of strings.
     vector<string> decode(string s) {
-        vector<string> v;
-        // s.find(separator);
-        return v;
+        return split_string(s, separator);
     }
 };
 
