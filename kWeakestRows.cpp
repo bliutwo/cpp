@@ -10,7 +10,7 @@ vector<int> kWeakestRows(vector<vector<int>>& mat, int k) {
         for (size_t j = 0; j < mat[i].size(); j++) {
             total += mat[i][j];
         }
-        p.first = i;
+        p.first = (int)i;
         p.second = total;
         indexToSum.push_back(p);
     }
